@@ -1,0 +1,21 @@
+import React from "react";
+
+export default function Footer() {
+  return (
+    <footer className='page-footer green lighten-4'>
+      <div className='footer-copyright'>
+        <div className='container'>
+          © {new Date().getFullYear()} Copyright Text
+          <a
+            className='grey-text text-lighten-4 right'
+            href='https://github.com/dmitrymitrakhovich/react-kitchen'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Repo
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
