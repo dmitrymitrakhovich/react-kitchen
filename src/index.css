@@ -30,3 +30,13 @@ nav {
 .card-content {
   flex-grow: 1;
 }
+
+img,
+iframe {
+  min-width: 100%;
+}
+
+iframe {
+  width: 600px;
+  height: 350px;
+}
