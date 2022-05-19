@@ -31,9 +31,8 @@ nav {
   flex-grow: 1;
 }
 
-img,
-iframe {
-  min-width: 100%;
+img {
+  min-width: 50%;
 }
 
 iframe {

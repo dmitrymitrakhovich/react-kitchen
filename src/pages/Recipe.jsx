@@ -23,9 +23,30 @@ export default function Recipe() {
           <h6>Category: {recipe.strCategory}</h6>
           {recipe.strArea && <h6>Area: {recipe.strArea}</h6>}
           <p>{recipe.strInstructions}</p>
+          <table className='centret'>
+            <thead>
+              <tr>
+                <th>Ingredients</th>
+                <th>Measure</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.keys(recipe).map((key) => {
+                if (key.includes("Ingredient") && recipe[key]) {
+                  return (
+                    <tr key={key}>
+                      <td>{recipe[key]}</td>
+                      <td>{recipe[`strMeasure${key.slice(13)}`]}</td>
+                    </tr>
+                  );
+                }
+                return null;
+              })}
+            </tbody>
+          </table>
           {recipe.strYoutube && (
             <div className='row'>
-              <h5>Video Recipe</h5>
+              <h5 style={{ margin: "2rem 0 1.5rem" }}>Video Recipe</h5>
               <iframe
                 title={id}
                 src={`https://www.youtube.com/embed/${recipe.strYoutube.slice(
